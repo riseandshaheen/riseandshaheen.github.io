@@ -5,7 +5,7 @@ export const siteData = {
   email: "riseandshaheen@gmail.com",
 
   about:
-    "I work as a DevRel Engineer focused on developer experience, ecosystem growth, and technical education.\n\nCurrently, a Developer Advocate at Cartesi (4 years), helping developers build with Cartesi through documentation, developer tooling, workshops, and hackathons. Helped grow a 5k+ developer community, mentored 30+ grant-funded projects, and supported builders across events and hackathons including ETHGlobal.\n\nPreviously, started my career as a Software Engineer at Amdocs, building APIs for telecommunication giants like AT&T and T-mobile.",
+    "I work as a DevRel Engineer focused on developer experience, ecosystem growth, and technical education.\n\nCurrently, a Developer Advocate at Cartesi (4 years), helping developers build with Cartesi through documentation, developer tooling, workshops, and hackathons. Helped grow a 5k+ developer community, mentored grant-funded projects, and supported builders across events and hackathons including ETHGlobal.\n\nPreviously, started my career as a Software Engineer at Amdocs, building APIs for telecommunication giants like AT&T and T-mobile.",
 
   social: {
     twitter: "https://twitter.com/riseandshaheen",

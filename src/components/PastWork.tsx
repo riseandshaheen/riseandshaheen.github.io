@@ -12,7 +12,7 @@ export default function PastWork() {
 
   return (
     <section id="work" className="section">
-      <h2 className="section-title">🔍 Past Work Highlights</h2>
+      <h2 className="section-title">What I've been doing lately</h2>
 
       <div className="work-grid">
         {contentItems.map((item, i) => (

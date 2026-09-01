@@ -12,11 +12,12 @@
   --color-text: #1a1a2e;
   --color-text-secondary: #555;
   --color-text-muted: #888;
-  --color-accent: #2563eb;
-  --color-accent-hover: #1d4ed8;
+  --color-accent: #5fb386;
+  --color-accent-hover: #4a9d72;
   --color-border: #e5e7eb;
   --color-tag-bg: #f1f5f9;
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-body: "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --max-width: 800px;
 }
 
@@ -25,12 +26,34 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   background: var(--color-bg);
   color: var(--color-text);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title,
+.hero-name,
+.hero-title,
+.hero-greeting,
+.btn,
+.event-name,
+.work-card h3,
+.content-page-header h1,
+.content-category-title,
+.content-card h3,
+.type-tag,
+.tech-tag,
+.content-meta {
+  font-family: var(--font-sans);
 }
 
 a {

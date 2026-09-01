@@ -3,7 +3,7 @@ import { siteData } from "../data";
 export default function Events() {
   return (
     <section id="events" className="section">
-      <h2 className="section-title">📍 Events</h2>
+      <h2 className="section-title">Where I've been lately</h2>
       <div className="events-grid">
         {siteData.events.map((event, i) => (
           <div key={i} className="event-card">
