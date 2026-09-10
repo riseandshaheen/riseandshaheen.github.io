@@ -1,5 +1,5 @@
 import { siteData } from "../data";
-import profileImg from "../assets/profile.jpg";
+import profileImg from "../assets/profile.webp";
 
 export default function Hero() {
   return (
@@ -28,6 +28,9 @@ export default function Hero() {
           src={profileImg}
           alt={siteData.name}
           className="hero-avatar"
+          width={200}
+          height={200}
+          decoding="async"
         />
       </div>
     </section>

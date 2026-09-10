@@ -28,6 +28,8 @@ export default function PastWork() {
                 src={item.thumbnail}
                 alt={item.title}
                 className="work-card-thumb"
+                loading="lazy"
+                decoding="async"
               />
             )}
             <div className="work-card-body">
@@ -53,6 +55,8 @@ export default function PastWork() {
                 src={project.thumbnail}
                 alt={project.name}
                 className="work-card-thumb"
+                loading="lazy"
+                decoding="async"
               />
             )}
             <div className="work-card-body">

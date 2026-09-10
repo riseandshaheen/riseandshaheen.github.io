@@ -80,7 +80,7 @@ export const siteData = {
         summary:
           "A 4 part series dedicated for JavaScript developers to build apps on the Cartesi stack.",
         link: "https://x.com/riseandshaheen/status/1844075945722073472/video/1",
-        thumbnail: new URL("./assets/thumbnails/build-in-js.png", import.meta.url).href,
+        thumbnail: new URL("./assets/thumbnails/build-in-js.webp", import.meta.url).href,
       },
       {
         title: "JS on Cartesi — Episode 2: Building Your First dApp",
