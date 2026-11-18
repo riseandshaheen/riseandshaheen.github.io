@@ -1,13 +1,33 @@
 import { siteData } from "../data";
 
+type WorkItem = {
+  title: string;
+  summary: string;
+  link: string;
+  thumbnail: string;
+  type: string;
+  tech?: string[];
+};
+
 export default function PastWork() {
   const { projects, content } = siteData;
 
-  const contentItems = [
+  const toProjectItem = (p: (typeof projects)[number]): WorkItem => ({
+    title: p.name,
+    summary: p.description,
+    link: p.link,
+    thumbnail: p.thumbnail,
+    type: "Project",
+    tech: p.tech,
+  });
+
+  const items: WorkItem[] = [
+    ...projects.filter((p) => p.recent).map(toProjectItem),
     ...content.jsSeries.slice(0, 1).map((v) => ({ ...v, type: "Video Series" })),
     ...content.tutorials.map((t) => ({ ...t, type: (t as { type?: string }).type || "Tutorial" })),
     ...content.podcasts.map((p) => ({ ...p, type: "Podcast" })),
     ...content.articles.map((a) => ({ ...a, type: "Article" })),
+    ...projects.filter((p) => !p.recent).map(toProjectItem),
   ];
 
   return (
@@ -15,9 +35,9 @@ export default function PastWork() {
       <h2 className="section-title">What I've been doing lately</h2>
 
       <div className="work-grid">
-        {contentItems.map((item, i) => (
+        {items.map((item) => (
           <a
-            key={`content-${i}`}
+            key={item.link}
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
@@ -37,34 +57,7 @@ export default function PastWork() {
               <p>{item.summary}</p>
               <div className="work-tags">
                 <span className="type-tag">{item.type}</span>
-              </div>
-            </div>
-          </a>
-        ))}
-
-        {projects.map((project, i) => (
-          <a
-            key={`proj-${i}`}
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="work-card"
-          >
-            {project.thumbnail && (
-              <img
-                src={project.thumbnail}
-                alt={project.name}
-                className="work-card-thumb"
-                loading="lazy"
-                decoding="async"
-              />
-            )}
-            <div className="work-card-body">
-              <h3>{project.name}</h3>
-              <p>{project.description}</p>
-              <div className="work-tags">
-                <span className="type-tag">Project</span>
-                {project.tech.map((t) => (
+                {item.tech?.map((t) => (
                   <span key={t} className="tech-tag">{t}</span>
                 ))}
               </div>

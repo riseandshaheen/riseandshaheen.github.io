@@ -15,6 +15,24 @@ export const siteData = {
 
   projects: [
     {
+      name: "Cartesi Skills",
+      description:
+        "SKILL.md files and ready-made prompts that equip AI coding agents to build and ship full-stack Cartesi Rollups v2 apps.",
+      tech: ["AI Agents", "Cartesi"],
+      link: "https://skills.mugen.builders",
+      thumbnail: new URL("./assets/thumbnails/cartesi-skills.webp", import.meta.url).href,
+      recent: true,
+    },
+    {
+      name: "Jev Experiments",
+      description:
+        "Experiments with Jev: a human-like writing scorer, a docs confusion heatmap, and a live city guesser.",
+      tech: ["TypeScript", "AI"],
+      link: "https://github.com/riseandshaheen/jev-decoded",
+      thumbnail: new URL("./assets/thumbnails/jev-experiments.webp", import.meta.url).href,
+      recent: true,
+    },
+    {
       name: "Scribbl",
       description:
         "A fun application where AI judges your hand-drawn doodles",
@@ -25,6 +43,11 @@ export const siteData = {
   ],
 
   events: [
+    {
+      name: "Devcon Mumbai",
+      image: new URL("./assets/events/devcon-mumbai.webp", import.meta.url).href,
+      link: "https://x.com/riseandshaheen/status/2117639617302434063",
+    },
     {
       name: "ETH Global Bangkok",
       image: new URL("./assets/events/eth-global-bangkok.jpeg", import.meta.url).href,
